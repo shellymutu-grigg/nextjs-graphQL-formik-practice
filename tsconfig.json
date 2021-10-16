@@ -1,0 +1,73 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "downlevelIteration": true,
+    "jsx": "preserve",
+    "baseUrl": "./", // This must be specified if "paths" is.
+    "paths": {
+      "@static/*": [
+        "src/static/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@graphql/*": [
+        "src/graphql/*"
+      ],
+      "@interfaces/*": [
+        "src/interfaces/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@theme/*": [
+        "src/theme/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@contentful-mocks/*": [
+        "src/contentful-mocks/*"
+      ]
+    },
+    "types": [
+      "node",
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "__generated__/globalTypes.ts"
+  ]
+}
