@@ -18,7 +18,7 @@
     // for the compatability with the auto-generated types by apollo-tools
     "camelcase": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-    "react/react-in-jsx-scope": "off",
+    // "react/react-in-jsx-scope": "off",
 
     // https://github.com/testing-library/eslint-plugin-testing-library#usage
     // "testing-library/await-async-query": "error",
