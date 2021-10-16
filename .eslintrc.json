@@ -1,5 +1,14 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["eslint:recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    // "plugin:react-hooks/recommended",
+    // always put prettier at last
+    "prettier"],
   "plugins": ["prettier"],
   // "rules": {
   //   "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
