@@ -27,4 +27,4 @@ npm run build ||
 )
 
 # If everything passes... Now we can commit
-echo '✅✅✅✅ Committing chnages ✅✅✅✅'
+echo '✅✅✅✅ Committing changes ✅✅✅✅'
