@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 const path = require('path');
 
 module.exports = {
@@ -13,6 +14,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -30,10 +32,17 @@ module.exports = {
       },
     },
   },
-  plugins: ['@typescript-eslint', 'testing-library', 'jest', 'import'],
+  plugins: [
+    '@typescript-eslint',
+    'testing-library',
+    'jest',
+    'import',
+    'prettier',
+  ],
   rules: {
     // for the compatability with the auto-generated types by apollo-tools
     camelcase: 'off',
+    'prettier/prettier': 'error',
 
     // https://github.com/testing-library/eslint-plugin-testing-library#usage
     'testing-library/await-async-query': 'error',
