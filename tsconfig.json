@@ -31,7 +31,7 @@
       "@styles/*": ["src/styles/*"],
       "@contentful-mocks/*": ["src/contentful-mocks/*"]
     },
-    "types": ["node"]
+    "types": ["node", "jest"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "__generated__/globalTypes.ts"]
