@@ -25,6 +25,9 @@ module.exports = {
         // this will make sure eslint resolves absolute paths properly.
         project: path.resolve(__dirname, 'src'),
       },
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     },
   },
   plugins: ['@typescript-eslint', 'testing-library', 'jest', 'import'],
