@@ -3,18 +3,18 @@
 
 echo '🏗️👷 Verifying code formatting, types and building project before committing'
 
-# Check Prettier standards
-npm run check:format ||
-(
-    echo '❌🤡 Prettier Check Failed. Run npm run format, add changes and try commit again. 🤡❌';
-    false;
-)
-
 # Check ESLint Standards
 npm run lint ||
 (
         echo '❌😤 ESLint Check Failed. Make the required changes listed above, add changes and try to commit again. 😤❌';
         false; 
+)
+
+# Check Prettier standards
+npm run check:format ||
+(
+    echo '❌🤡 Prettier Check Failed. Run npm run format, add changes and try commit again. 🤡❌';
+    false;
 )
 
 # Check tsconfig standards
