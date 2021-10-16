@@ -31,7 +31,7 @@ export default function Home() {
             <p>Demonstration of Jest in action</p>
           </a>
 
-          <a href="h#" className={styles.card}>
+          <a href="#" className={styles.card}>
             <h2>Formik Form &rarr;</h2>
             <p>See formik in action</p>
           </a>
