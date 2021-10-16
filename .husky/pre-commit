@@ -1,0 +1,34 @@
+echo '🏗️👷 Verifying code formatting, types and building project before committing'
+
+# Check Prettier standards
+npm run check-format ||
+(
+    echo '❌🤡 Prettier Check Failed. Run npm run format, add changes and try commit again. 🤡❌';
+    false;
+)
+
+# Check ESLint Standards
+npm run lint ||
+(
+        echo '❌😤 ESLint Check Failed. Make the required changes listed above, add changes and try to commit again. 😤❌'
+        false; 
+)
+
+# Check tsconfig standards
+npm run check-types ||
+(
+    echo '🤡😂❌🤡 Failed Type check. Make the required changes listed above, add changes and try to commit again. 🤡❌😂🤡'
+    false;
+)
+
+# If everything passes... Now we can commit
+echo '🤔🤔🤔🤔... Alright... Code looks good... Attempting to build... 🤔🤔🤔🤔'
+
+npm run build ||
+(
+    echo '❌👷🔨❌ Next build failed: View the errors above to see why. ❌🔨👷❌'
+    false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ Committing chnages ✅✅✅✅'
