@@ -6,7 +6,7 @@ interface CardProps {
   content: string;
   href: string;
 }
-const Card: FC<CardProps> = ({ title, content, href }) => {
+export const Card: FC<CardProps> = ({ title, content, href }) => {
   const { card } = useCardStyles();
 
   return (
@@ -18,5 +18,3 @@ const Card: FC<CardProps> = ({ title, content, href }) => {
     </>
   );
 };
-
-export default Card;
