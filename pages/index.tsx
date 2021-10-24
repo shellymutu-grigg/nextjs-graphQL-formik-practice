@@ -1,14 +1,14 @@
 /* eslint-disable prettier/prettier */
 import Head from 'next/head';
 import Image from 'next/image';
-import { Card } from '@components/Card';
-import styles from '../../styles/Home.module.css';
+import { Card } from '@components/Card/Card';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Next App</title>
+        <title>Practice Repo</title>
         <meta name="description" content="Practice implementing next.js" />
         <link rel="icon" href="/logo_utum.svg" />
       </Head>
@@ -22,11 +22,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Card
-            title="Typescript &rarr;"
-            content="Practice Typescript"
-            href="#"
-          />
+          <Card title="Typescript" content="Practice Typescript" href="#" />
 
           <a href="#" className={styles.card}>
             <h2>Jest &rarr;</h2>
@@ -54,10 +50,10 @@ export default function Home() {
           Powered by{' '}
           <span className={styles.logo}>
             <Image
-              src="/logo_utum.svg"
+              src="/favicon.ico"
               alt="UTUM Logo"
-              width={72}
-              height={25}
+              width={20}
+              height={40}
             />
           </span>
         </a>

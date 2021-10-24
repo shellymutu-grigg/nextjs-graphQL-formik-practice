@@ -54,7 +54,7 @@ const csp = buildCSP({
 
 const nextConfig = {
   basePath: '',
-  pageExtensions: ['page.tsx', 'page.ts'],
+  // pageExtensions: ['page.tsx', 'page.ts', ],
   async headers() {
     return [
       {

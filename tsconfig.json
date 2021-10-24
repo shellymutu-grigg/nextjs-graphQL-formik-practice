@@ -25,7 +25,7 @@
       "@graphql/*": ["src/graphql/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@utils/*": ["src/utils/*"],
-      "@pages/*": ["src/pages/*"],
+      "@pages/*": ["pages/*"],
       "@theme/*": ["src/theme/*"],
       "@services/*": ["src/services/*"],
       "@styles/*": ["src/styles/*"],
@@ -33,6 +33,6 @@
     },
     "types": ["node", "jest"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.tsx"],
   "exclude": ["node_modules", "__generated__/globalTypes.ts"]
 }
