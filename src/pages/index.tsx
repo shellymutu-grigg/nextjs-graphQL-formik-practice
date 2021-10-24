@@ -22,7 +22,8 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Card title="new" content="test" href="#" />
+          <Card title="Typescript" content="Practice Typescript" href="#" />
+          <Card title="new test" content="test" href="#" />
           <a href="#" className={styles.card}>
             <h2>Typescript &rarr;</h2>
             <p>Practice Typescript</p>
