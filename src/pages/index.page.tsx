@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Next App</title>
+        <title>Practice Repo</title>
         <meta name="description" content="Practice implementing next.js" />
         <link rel="icon" href="/logo_utum.svg" />
       </Head>
@@ -24,14 +24,14 @@ export default function Home() {
         <div className={styles.grid}>
           <Card
             title="Typescript"
-            content="Practice Typescript"
+            content="Practice using Typescript"
             href="#"
           />
-
-          <a href="#" className={styles.card}>
-            <h2>Jest &rarr;</h2>
-            <p>Demo of Jest in action</p>
-          </a>
+          <Card
+            title="Jest"
+            content="Demonstration of Jest in action"
+            href="#"
+          />
 
           <a href="#" className={styles.card}>
             <h2>Formik Form &rarr;</h2>
