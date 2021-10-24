@@ -23,7 +23,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <Card
-            title="Typescript &rarr;"
+            title="Typescript"
             content="Practice Typescript"
             href="#"
           />
