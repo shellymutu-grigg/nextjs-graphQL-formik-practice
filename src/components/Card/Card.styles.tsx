@@ -11,15 +11,7 @@ export const useCardStyles = makeStyles(() => ({
     borderRadius: '10px',
     transition: 'color 0.15s ease, border-color 0.15s ease',
     width: '45%',
-    '&:hover': {
-      color: '#0070f3',
-      borderColor: '#0070f3',
-    },
-    '&:focus': {
-      color: '#0070f3',
-      borderColor: '#0070f3',
-    },
-    '&:active': {
+    '&:hover, &:focus, &:active': {
       color: '#0070f3',
       borderColor: '#0070f3',
     },
