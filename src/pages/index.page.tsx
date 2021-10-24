@@ -22,15 +22,15 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Card title="new" content="test" href="#" />
-          <a href="#" className={styles.card}>
-            <h2>Typescript &rarr;</h2>
-            <p>Practice Typescript</p>
-          </a>
+          <Card
+            title="Typescript &rarr;"
+            content="Practice Typescript"
+            href="#"
+          />
 
           <a href="#" className={styles.card}>
             <h2>Jest &rarr;</h2>
-            <p>Demonstration of Jest in action</p>
+            <p>Demo of Jest in action</p>
           </a>
 
           <a href="#" className={styles.card}>
