@@ -4,7 +4,7 @@ import { useUser } from '@auth0/nextjs-auth0';
 import { defaults, messages } from '@utils/constants';
 import { obfuscateEmail } from '@utils/obfuscate-email';
 import { Button } from '@components/Button/Button';
-import { MemberCareMessage } from '@components/MemberCareMessage/MemberCareMessage';
+import { Message } from '@components/Message/Message';
 import { resendEmail } from '@services/client/authentication.client';
 import { useResendEmailStyles } from '@components/resend-email.styles';
 
@@ -138,7 +138,7 @@ const ResendEmailSection: React.FC = () => {
 
             <Grid item xs={12}>
               <Typography paragraph align="left" variant="subtitle1">
-                <MemberCareMessage helperText={messages.HELP_TEXT_PART_ONE} />
+                <Message helperText={messages.HELP_TEXT_PART_ONE} />
               </Typography>
             </Grid>
           </Grid>

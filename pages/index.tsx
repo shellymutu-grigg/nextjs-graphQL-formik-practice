@@ -16,7 +16,7 @@ export default withPageAuthRequired(function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Practice of implementating of Next.js!</h1>
+        <h1 className={styles.title}>Practice implementating of Next.js!</h1>
 
         <div className={styles.grid}>
           <Card

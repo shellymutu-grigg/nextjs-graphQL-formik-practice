@@ -6,9 +6,7 @@ export interface MemberCareMessageProps {
   helperText: string;
 }
 
-export const MemberCareMessage: React.FC<MemberCareMessageProps> = ({
-  helperText,
-}) => {
+export const Message: React.FC<MemberCareMessageProps> = ({ helperText }) => {
   return (
     <>
       {helperText}
