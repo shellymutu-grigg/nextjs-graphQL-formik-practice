@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useCardStyles = makeStyles((theme) => ({
+export const useCardStyles = makeStyles(() => ({
   card: {
     margin: '1rem',
     padding: '1.5rem',
@@ -11,30 +11,26 @@ export const useCardStyles = makeStyles((theme) => ({
     borderRadius: '10px',
     transition: 'color 0.15s ease, border-color 0.15s ease',
     width: '45%',
-  },
-  layout: {
-    overflow: 'hidden',
-    minWidth: '320px',
-    height: '100%',
-
-    '& .main-content': {
-      position: 'absolute',
-      top: '4.5rem',
-      margin: '0 auto',
-      width: '100%',
-      left: '0',
-      right: '0',
-      padding: '1rem 1rem 6rem',
+    '&:hover': {
+      color: '#0070f3',
+      borderColor: '#0070f3',
+    },
+    '&:focus': {
+      color: '#0070f3',
+      borderColor: '#0070f3',
+    },
+    '&:active': {
+      color: '#0070f3',
+      borderColor: '#0070f3',
     },
   },
-
-  boldHeader: {
-    fontSize: '1.25rem',
-    fontWeight: 'bold',
-    lineHeight: '1.75rem',
+  h2: {
+    margin: '0 0 1rem 0',
+    fontSize: '1.5rem',
   },
-
-  marginBottomX1point5: {
-    marginBottom: theme.spacing(1.5),
+  p: {
+    margin: 0,
+    fontSize: '1.25rem',
+    lineHeight: '1.5',
   },
 }));
