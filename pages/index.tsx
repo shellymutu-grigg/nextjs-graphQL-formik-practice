@@ -14,15 +14,15 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Implementation of Next.js!</h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>src/pages/index.js</code>
-        </p>
+        <h1 className={styles.title}>Practice of implementating of Next.js!</h1>
 
         <div className={styles.grid}>
           <Card title="Typescript" content="Practice Typescript" href="#" />
+          <Card title="new test" content="test" href="#" />
+          <a href="#" className={styles.card}>
+            <h2>Typescript &rarr;</h2>
+            <p>Practice Typescript</p>
+          </a>
 
           <a href="#" className={styles.card}>
             <h2>Jest &rarr;</h2>
