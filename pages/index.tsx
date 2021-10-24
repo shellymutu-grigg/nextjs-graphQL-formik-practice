@@ -1,25 +1,20 @@
 /* eslint-disable prettier/prettier */
 import Head from 'next/head';
 import Image from 'next/image';
-import { Card } from '@components/Card';
-import styles from '../../styles/Home.module.css';
+import { Card } from '@components/Card/Card';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Next App</title>
+        <title>Practice Repo</title>
         <meta name="description" content="Practice implementing next.js" />
         <link rel="icon" href="/logo_utum.svg" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Implementation of Next.js!</h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>src/pages/index.js</code>
-        </p>
+        <h1 className={styles.title}>Practice of implementating of Next.js!</h1>
 
         <div className={styles.grid}>
           <Card title="Typescript" content="Practice Typescript" href="#" />
@@ -31,7 +26,7 @@ export default function Home() {
 
           <a href="#" className={styles.card}>
             <h2>Jest &rarr;</h2>
-            <p>Demonstration of Jest in action</p>
+            <p>Demo of Jest in action</p>
           </a>
 
           <a href="#" className={styles.card}>
@@ -55,10 +50,10 @@ export default function Home() {
           Powered by{' '}
           <span className={styles.logo}>
             <Image
-              src="/logo_utum.svg"
+              src="/favicon.ico"
               alt="UTUM Logo"
-              width={72}
-              height={25}
+              width={20}
+              height={40}
             />
           </span>
         </a>
