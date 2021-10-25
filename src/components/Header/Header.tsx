@@ -18,10 +18,10 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const pageDetails = {
     header: {
-      logoUrl: '',
+      logoUrl: 'https://www.utum.co.nz',
       logoUrlTarget: '',
       logoImage: {
-        url: '',
+        url: '/public/favicon.ico',
         title: '',
       },
       profileImageSelected: { url: '', width: '', height: '' },
@@ -55,10 +55,10 @@ export const Header: React.FC<HeaderProps> = ({
                 target={pageDetails?.header?.logoUrlTarget ? '_self' : '_blank'}
               >
                 <img
-                  src={pageDetails?.header?.logoImage?.url ?? ''}
+                  src="../../../public/logo_utum.svg"
                   alt={pageDetails?.header?.logoImage?.title ?? ''}
-                  width="38"
-                  height="38"
+                  width="20"
+                  height="40"
                 />
               </Link>
               {!hideProfile && (

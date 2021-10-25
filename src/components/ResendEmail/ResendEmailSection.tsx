@@ -1,53 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { Typography, Grid, Box } from '@material-ui/core';
-import { useUser } from '@auth0/nextjs-auth0';
-import { defaults, messages } from '@utils/constants';
+import { messages } from '@utils/constants';
 import { obfuscateEmail } from '@utils/obfuscate-email';
 import { Button } from '@components/Button/Button';
-import { Message } from '@components/Message/Message';
-import { resendEmail } from '@services/client/authentication.client';
-import { useResendEmailStyles } from '@components/resend-email.styles';
+import { Link } from '@components/Link/Link';
+import { useResendEmailStyles } from './ResendEmailSection.styles';
 
-const ResendEmailSection: React.FC = () => {
-  const { layout, boldHeader, marginBottomX1point5 } = useResendEmailStyles();
-  const user = useUser()?.user;
-  const [isDisabled, setIsDisabled] = useState(true);
-  const [resendEmailCount, setresendEmailCount] = useState(0);
-  const [apiError, setAPIError] = useState(false);
-
-  /*
-   * Set the state of the button depending on disabled state
-   * Create timer to activate button after RESEND_EMAIL_TIME_OUT is complete.
-   */
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      // if the RESEND_EMAIL_MAX_LIMIT is reached leave button disabled
-
-      setIsDisabled(resendEmailCount >= defaults.RESEND_EMAIL_MAX_LIMIT);
-    }, defaults.RESEND_EMAIL_TIME_OUT);
-
-    return () => {
-      if (timer) {
-        clearTimeout(timer);
-      }
-    };
-  }, [isDisabled, resendEmailCount]);
-
-  const handleClick = async () => {
-    try {
-      await resendEmail();
-      setIsDisabled(true);
-      setAPIError(false);
-      setresendEmailCount(resendEmailCount + 1);
-    } catch (error) {
-      setAPIError(true);
-      setIsDisabled(true);
-    }
-  };
+interface CardProps {
+  user: any;
+  handleClick: () => void;
+  isDisabled: boolean;
+  apiError: boolean;
+}
+export const ResendEmailSection: FC<CardProps> = ({
+  user,
+  handleClick,
+  isDisabled,
+  apiError,
+}) => {
+  const { boldHeader, marginBottomX1point5 } = useResendEmailStyles();
 
   return (
-    <Grid container direction="column" className={layout}>
+    <>
       <Grid
         component={Grid}
         container
@@ -102,11 +76,11 @@ const ResendEmailSection: React.FC = () => {
               </Typography>
             </Grid>
 
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <Typography paragraph align="left" variant="subtitle1">
                 {messages.SPAM_FOLDER_CHECK}
               </Typography>
-            </Grid>
+            </Grid> */}
 
             <Box component={Grid} pb={2}>
               <Button
@@ -138,14 +112,23 @@ const ResendEmailSection: React.FC = () => {
 
             <Grid item xs={12}>
               <Typography paragraph align="left" variant="subtitle1">
-                <Message helperText={messages.HELP_TEXT_PART_ONE} />
+                {messages.HELP_TEXT_PART_ONE}
+                {messages.MESSAGE_TEXT_ONE}
+                <Link href={`mailto:${messages.CONTACT_CENTER_EMAIL}`}>
+                  {messages.CONTACT_CENTER_EMAIL}
+                </Link>
+                {messages.MESSAGE_TEXT_TWO}
+                <Link
+                  href={`tel:${messages.CONTACT_CENTER_PHONE_NUMBER_TEL_LINK}`}
+                >
+                  {messages.CONTACT_CENTER_PHONE_NUMBER}
+                </Link>
+                {/* {messages.MEMBER_CARE_MESSAGE_TEXT_THREE} */}
               </Typography>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
-
-export default ResendEmailSection;

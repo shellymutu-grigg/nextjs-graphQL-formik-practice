@@ -42,9 +42,9 @@ export const errors = {
  */
 export const messages = {
   CHECK_EMAIL_PART_ONE: "Check the email we've sent to ",
-  CHECK_EMAIL_PART_TWO: ' and follow the link to continue',
+  CHECK_EMAIL_PART_TWO: ' and click the link to verify your email',
   CONTACT_CENTER_EMAIL: 'test@email.com',
-  CONTACT_CENTER_PHONE_NUMBER: '0800 022 022',
+  CONTACT_CENTER_PHONE_NUMBER: '0800 GET HELP',
   CONTACT_CENTER_PHONE_NUMBER_TEL_LINK: '0800022022',
   DATE_OF_BIRTH: 'Date of birth',
   EMAIL_SENT_CTA: 'Email Sent',
@@ -53,10 +53,8 @@ export const messages = {
   FIRST_NAME: 'First name',
   HELP_TEXT_PART_ONE: 'If you need help, ',
   LAST_NAME: 'Last name',
-  MEMBER_CARE_MESSAGE_TEXT_ONE: 'please email us at ',
-  MEMBER_CARE_MESSAGE_TEXT_TWO: ' or give us a call on ',
-  MEMBER_CARE_MESSAGE_TEXT_THREE:
-    " between Monday to Friday 8am-6pm and we'll get this sorted over the phone.",
+  MESSAGE_TEXT_ONE: 'please email us at ',
+  MESSAGE_TEXT_TWO: ' or give us a call on ',
   NEXT_CTA_TEXT: 'Next',
   PHONE_NUMBER: 'Phone number',
   RESEND_CTA: 'Resend email',
@@ -65,7 +63,6 @@ export const messages = {
   SPAM_FOLDER_CHECK:
     "Remember to check spam and other folders. If you haven't received an email from us, you can " +
     'click the button below in 60 seconds to resend it.',
-  UNKNOWN_MEMBERSHIP_NUMBER: "I don't know my AA Membership number",
   VERIFICATION: 'Verification',
 } as const;
 
