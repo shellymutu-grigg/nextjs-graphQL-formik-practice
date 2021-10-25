@@ -114,14 +114,10 @@ export const ResendEmailSection: FC<CardProps> = ({
               <Typography paragraph align="left" variant="subtitle1">
                 {messages.HELP_TEXT_PART_ONE}
                 {messages.MESSAGE_TEXT_ONE}
-                <Link href={`mailto:${messages.CONTACT_CENTER_EMAIL}`}>
-                  {messages.CONTACT_CENTER_EMAIL}
-                </Link>
+                <Link href={`mailto:${messages.EMAIL}`}>{messages.EMAIL}</Link>
                 {messages.MESSAGE_TEXT_TWO}
-                <Link
-                  href={`tel:${messages.CONTACT_CENTER_PHONE_NUMBER_TEL_LINK}`}
-                >
-                  {messages.CONTACT_CENTER_PHONE_NUMBER}
+                <Link href={`tel:${messages.PHONE_NUMBER_TEL_LINK}`}>
+                  {messages.PHONE_NUMBER}
                 </Link>
                 {/* {messages.MEMBER_CARE_MESSAGE_TEXT_THREE} */}
               </Typography>
