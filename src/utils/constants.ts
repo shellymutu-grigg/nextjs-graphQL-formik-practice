@@ -43,10 +43,8 @@ export const errors = {
 export const messages = {
   CHECK_EMAIL_PART_ONE: "Check the email we've sent to ",
   CHECK_EMAIL_PART_TWO: ' and click the link to verify your email',
-  CONTACT_CENTER_EMAIL: 'test@email.com',
-  CONTACT_CENTER_PHONE_NUMBER: '0800 GET HELP',
-  CONTACT_CENTER_PHONE_NUMBER_TEL_LINK: '0800022022',
   DATE_OF_BIRTH: 'Date of birth',
+  EMAIL: 'test@email.com',
   EMAIL_SENT_CTA: 'Email Sent',
   ENTER_DETAILS_PART_ONE: "Populate the following fields and click '",
   ENTER_DETAILS_PART_TWO: "' to identify your membership record.",
@@ -55,8 +53,11 @@ export const messages = {
   LAST_NAME: 'Last name',
   MESSAGE_TEXT_ONE: 'please email us at ',
   MESSAGE_TEXT_TWO: ' or give us a call on ',
+  MESSAGE_TEXT_THREE: 'We are here to help.',
   NEXT_CTA_TEXT: 'Next',
   PHONE_NUMBER: 'Phone number',
+  PHONE_NUMBER_HELP: '0800 GET HELP',
+  PHONE_NUMBER_TEL_LINK: '0800022022',
   RESEND_CTA: 'Resend email',
   RESEND_EMAIL_ERROR:
     'We seem to be having issues right now. Please try again later.',
@@ -76,6 +77,7 @@ export const NEXT_PUBLIC_API = '/api/graphql';
  */
 export const slugPaths = {
   RESEND_EMAIL: '/resend-email',
+  HOME: '/',
 } as const;
 
 /**

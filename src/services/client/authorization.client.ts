@@ -1,5 +1,7 @@
 import { serverRuntimeConfig } from '@utils/config';
 import { request } from '@utils/request';
+import { dateFormats } from '@utils/constants';
+import { formatDate } from '@utils/date-helpers';
 
 export const verifyEmail = ({
   user_id,
@@ -23,4 +25,34 @@ export const verifyEmail = ({
       },
     },
   );
+};
+
+export const verifyMember = async (postBody: {
+  firstName?: string;
+  lastName: string;
+  dateOfBirth: string;
+  phoneNumber?: string;
+  membershipNumber?: string;
+}) => {
+  const { data } = await request('/api/backend/verifymember', {
+    method: 'POST',
+    body: {
+      ...postBody,
+      ...(postBody.membershipNumber && {
+        membershipNumber: parseInt(
+          postBody.membershipNumber.replaceAll(' ', ''),
+          10,
+        ),
+      }),
+      dateOfBirth: formatDate(
+        postBody.dateOfBirth,
+        dateFormats.DATE_VALUE_FORMAT,
+        dateFormats.DATE_DISPLAY_FORMAT,
+      ),
+      ...(postBody.phoneNumber && {
+        phoneNumber: postBody.phoneNumber.replaceAll(' ', ''),
+      }),
+    },
+  });
+  return data;
 };
