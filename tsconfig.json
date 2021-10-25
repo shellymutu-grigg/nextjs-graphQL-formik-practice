@@ -29,7 +29,8 @@
       "@theme/*": ["src/theme/*"],
       "@services/*": ["src/services/*"],
       "@styles/*": ["src/styles/*"],
-      "@contentful-mocks/*": ["src/contentful-mocks/*"]
+      "@contentful-mocks/*": ["src/contentful-mocks/*"],
+      "@public/*": ["public/*"]
     },
     "types": ["node", "jest"]
   },
