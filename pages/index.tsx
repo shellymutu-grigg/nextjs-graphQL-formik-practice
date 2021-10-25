@@ -16,21 +16,23 @@ export default withPageAuthRequired(function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Practice implementating of Next.js!</h1>
+        <h2 className={styles.title}>
+          Practice implementating Next.js & Friends!
+        </h2>
 
         <div className={styles.grid}>
           <Card
-            title={user ? 'Logout' : 'Login'}
-            content={user ? 'Allow users to logout' : 'Allow users to Login'}
-            href={user ? '/api/auth/logout' : '/api/auth/login'}
+            title="Authentication"
+            content="Users are able to logout here"
+            href="/api/auth/logout"
             auth={!!user}
           />
-
-          <a href="#" className={styles.card}>
-            <h2>Jest &rarr;</h2>
-            <p>Demo of Jest in action</p>
-          </a>
-
+          <Card
+            title="Jest"
+            content="Demo of Jest in action"
+            href="#"
+            auth={!!user}
+          />
           <Card
             title="Auth0 Resend Email"
             content="Resend Authentication Email from Auth0"
@@ -38,10 +40,26 @@ export default withPageAuthRequired(function Home() {
             auth={!!user}
           />
 
-          <a href="#" className={styles.card}>
-            <h2>GraphQL &rarr;</h2>
-            <p>Connecting graphQL to contentful</p>
-          </a>
+          <Card
+            title="Formik"
+            content="See formik validation in action"
+            href="#"
+            auth={!!user}
+          />
+
+          <Card
+            title="Placeholder"
+            content="Placeholder"
+            href="#"
+            auth={!!user}
+          />{' '}
+ 
+          <Card
+            title="Graph QL"
+            content="Connecting graphQL to contentful"
+            href="#"
+            auth={!!user}
+          />
         </div>
       </main>
 
