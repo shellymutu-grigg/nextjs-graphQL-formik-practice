@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { ResendEmailSection } from '@components/ResendEmail/ResendEmailSection';
+import { ResendEmailSection } from '@components/ResendEmailSection/ResendEmailSection';
 import { Grid } from '@material-ui/core';
 import { useUser } from '@auth0/nextjs-auth0';
 import { defaults } from '@utils/constants';
 import { resendEmail } from '@services/client/authentication.client';
-import { useResendEmailStyles } from '@components/ResendEmail/ResendEmailSection.styles';
+import { useResendEmailStyles } from '@components/ResendEmailSection/ResendEmailSection.styles';
 
 const ResendEmailLayout: React.FC = () => {
   const user = useUser()?.user;

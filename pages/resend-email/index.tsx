@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '@components/Header/Header';
 import { Container } from '@material-ui/core';
-import { useResendEmailStyles } from '../../src/components/ResendEmail/ResendEmailSection.styles';
+import { useResendEmailStyles } from '../../src/components/ResendEmailSection/ResendEmailSection.styles';
 import ResendEmailLayout from './resend-email';
 
 function ResendEmail(): any {
