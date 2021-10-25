@@ -129,7 +129,7 @@ const overrides: Overrides = {
   MuiContainer: {
     root: {
       [globalTheme.breakpoints.up('xs')]: {
-        padding: '0 1rem',
+        padding: '1rem 1rem',
       },
     },
   },
