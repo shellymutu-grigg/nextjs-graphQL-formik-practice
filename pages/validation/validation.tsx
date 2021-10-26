@@ -3,34 +3,42 @@ import React, { useEffect } from 'react';
 import { Grid } from '@material-ui/core';
 import { ValidationSection } from '@components/ValidationSection/ValidationSection';
 import { slugPaths } from '@utils/constants';
-import { getMembershipFromAccessToken } from '@utils/session';
+import { getDetailsFromAccessToken } from '@utils/session';
 import { useResendEmailStyles } from '@components/ResendEmailSection/ResendEmailSection.styles';
 
 interface ValidationProps {
   accessToken: string | null;
 }
 
-const useBackToMyMembershipForUserWithMembership = (
-  accessToken: ValidationProps['accessToken'],
-) => {
+const useBackToHomeForUser = (accessToken: ValidationProps['accessToken']) => {
   const router = useRouter();
 
   useEffect(() => {
-    const membership = getMembershipFromAccessToken(accessToken);
+    const details = getDetailsFromAccessToken(accessToken);
 
-    if (membership !== null) {
+    if (details !== null) {
       router.replace(slugPaths.HOME);
     }
   }, [accessToken, router]);
 };
 
 const Validation: React.FC<ValidationProps> = ({ accessToken }) => {
-  useBackToMyMembershipForUserWithMembership(accessToken);
+  useBackToHomeForUser(accessToken);
   const { layout } = useResendEmailStyles();
   return (
-    <Grid container direction="column" className={layout}>
-      <ValidationSection />
-    </Grid>
+    <>
+      <Grid container direction="column" className={layout}>
+        <Grid
+          component={Grid}
+          container
+          direction="row"
+          justifyContent="center"
+          alignContent="center"
+        >
+          <ValidationSection />
+        </Grid>
+      </Grid>
+    </>
   );
 };
 export default Validation;

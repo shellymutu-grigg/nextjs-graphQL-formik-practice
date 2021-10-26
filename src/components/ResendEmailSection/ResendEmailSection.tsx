@@ -18,7 +18,7 @@ export const ResendEmailSection: FC<CardProps> = ({
   isDisabled,
   apiError,
 }) => {
-  const { boldHeader, marginBottomX1point5 } = useResendEmailStyles();
+  const { boldHeader, bottomMargin1point5 } = useResendEmailStyles();
 
   return (
     <>
@@ -50,13 +50,13 @@ export const ResendEmailSection: FC<CardProps> = ({
             direction="row"
             alignItems="flex-start"
             justifyContent="center"
-            className={marginBottomX1point5}
+            className={bottomMargin1point5}
             wrap="wrap"
           >
             <Grid item xs={12}>
               <Box>
                 <Typography
-                  variant="h6"
+                  variant="h4"
                   gutterBottom
                   align="left"
                   className={boldHeader}
@@ -67,7 +67,7 @@ export const ResendEmailSection: FC<CardProps> = ({
             </Grid>
 
             <Grid item xs={12}>
-              <Typography paragraph align="left" variant="body2">
+              <Typography paragraph align="left" variant="subtitle1">
                 {messages.CHECK_EMAIL_PART_ONE}
 
                 {user ? obfuscateEmail(user?.email) : ''}
@@ -75,12 +75,6 @@ export const ResendEmailSection: FC<CardProps> = ({
                 {messages.CHECK_EMAIL_PART_TWO}
               </Typography>
             </Grid>
-
-            {/* <Grid item xs={12}>
-              <Typography paragraph align="left" variant="subtitle1">
-                {messages.SPAM_FOLDER_CHECK}
-              </Typography>
-            </Grid> */}
 
             <Box component={Grid} pb={2}>
               <Button
@@ -117,7 +111,7 @@ export const ResendEmailSection: FC<CardProps> = ({
                 <Link href={`mailto:${messages.EMAIL}`}>{messages.EMAIL}</Link>
                 {messages.MESSAGE_TEXT_TWO}
                 <Link href={`tel:${messages.PHONE_NUMBER_TEL_LINK}`}>
-                  {messages.PHONE_NUMBER}
+                  {messages.PHONE_NUMBER_HELP}
                 </Link>
                 {/* {messages.MEMBER_CARE_MESSAGE_TEXT_THREE} */}
               </Typography>

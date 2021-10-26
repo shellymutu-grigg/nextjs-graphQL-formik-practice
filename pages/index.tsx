@@ -28,21 +28,21 @@ export default withPageAuthRequired(function Home() {
             auth={!!user}
           />
           <Card
-            title="Jest"
-            content="Demo of Jest in action"
-            href="#"
-            auth={!!user}
-          />
-          <Card
             title="Auth0 Resend Email"
             content="Resend Authentication Email from Auth0"
             href="/resend-email"
             auth={!!user}
           />
-
           <Card
             title="Formik"
             content="See formik validation in action"
+            href="/validation"
+            auth={!!user}
+          />
+
+          <Card
+            title="Jest"
+            content="Demo of Jest in action"
             href="#"
             auth={!!user}
           />
@@ -53,7 +53,7 @@ export default withPageAuthRequired(function Home() {
             href="#"
             auth={!!user}
           />{' '}
- 
+          
           <Card
             title="Graph QL"
             content="Connecting graphQL to contentful"

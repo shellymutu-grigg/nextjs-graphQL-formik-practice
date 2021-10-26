@@ -11,7 +11,6 @@ export const useValidationSectionStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-
     [theme.breakpoints.up('sm')]: {
       height: '100%',
       padding: 0,
@@ -20,9 +19,10 @@ export const useValidationSectionStyles = makeStyles((theme) => ({
   validationModal: {
     maxWidth: '37.5rem',
     fontSize: '1rem',
+    padding: '1rem 2.5rem',
   },
   padding: {
-    padding: '1rem 1rem 6rem',
+    padding: '2rem 1rem 1rem',
     [theme.breakpoints.up('md')]: {
       padding: '1rem',
     },

@@ -32,18 +32,11 @@ export const verifyMember = async (postBody: {
   lastName: string;
   dateOfBirth: string;
   phoneNumber?: string;
-  membershipNumber?: string;
 }) => {
   const { data } = await request('/api/backend/verifymember', {
     method: 'POST',
     body: {
       ...postBody,
-      ...(postBody.membershipNumber && {
-        membershipNumber: parseInt(
-          postBody.membershipNumber.replaceAll(' ', ''),
-          10,
-        ),
-      }),
       dateOfBirth: formatDate(
         postBody.dateOfBirth,
         dateFormats.DATE_VALUE_FORMAT,
