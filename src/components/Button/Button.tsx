@@ -27,7 +27,6 @@ export interface ButtonProps {
   hrefTarget?: Nullable<boolean>;
   onClick?: () => void;
   className?: string;
-  dataE2eTag?: string;
   innerClassName?: string;
   linkClassName?: string;
   loading?: boolean;
@@ -54,7 +53,6 @@ export const Button = ({
   hrefTarget,
   onClick,
   className,
-  dataE2eTag,
   endIconStyle,
   loading = false,
   spinnerSize = 16,
@@ -85,7 +83,6 @@ export const Button = ({
         )
       }
       disabled={loading || disabled}
-      data-e2e={dataE2eTag}
       onClick={onClick}
       disableRipple
       disableElevation
