@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  // we need to include only files under `src` here since our unit tests are
+  // all under `src`. Apparently, the lesser the files included, the faster the
+  // test runs. see https://kulshekhar.github.io/ts-jest/docs/getting-started/options/isolatedModules/#caveats
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
+}
