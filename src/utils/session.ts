@@ -5,29 +5,28 @@ import { serverRuntimeConfig } from '@utils/config';
 import jwtDecode from 'jwt-decode';
 import { getAuth0 } from '@utils/getAuth0';
 
-export interface AAHeaders {
+export interface Headers {
   'x-api-key'?: string;
   authorization?: string;
 }
 
-export interface MyAA_AccessTokenObject {
-  'https://aa/roles'?: Array<{ role: 'aa-mb'; Membership?: string }>;
+export interface AccessTokenObject {
+  'https://xx/roles'?: Array<{ role: 'mb'; Details?: string }>;
 }
 
-export function getMembershipFromAccessToken(accessToken: null | string) {
+export function getDetailsFromAccessToken(accessToken: null | string) {
   let retVal = null;
 
   try {
-    const claims = jwtDecode<MyAA_AccessTokenObject>(accessToken || '');
-    if (claims['https://aa/roles']) {
-      const role = claims['https://aa/roles'].find(
-        (rule) =>
-          rule.role === 'aa-mb' && 'Membership' in rule && rule.Membership,
+    const claims = jwtDecode<AccessTokenObject>(accessToken || '');
+    if (claims['https://xx/roles']) {
+      const role = claims['https://xx/roles'].find(
+        (rule) => rule.role === 'mb' && 'Details' in rule && rule.Details,
       );
 
       // check that it also has only digits
-      if (role && role.Membership && /^\d+$/.test(role.Membership)) {
-        retVal = role.Membership.replace(/\s/g, '');
+      if (role && role.Details && /^\d+$/.test(role.Details)) {
+        retVal = role.Details.replace(/\s/g, '');
       }
     }
   } catch (error) {
@@ -40,7 +39,7 @@ export function getMembershipFromAccessToken(accessToken: null | string) {
 export async function getSessionHeaders(
   req: IncomingMessage | NextApiRequest,
   res: ServerResponse | NextApiResponse,
-): Promise<AAHeaders> {
+): Promise<Headers> {
   let accessToken = null;
 
   try {
@@ -71,7 +70,7 @@ export async function getSessionCid(
   const accessToken = getAuth0().getSession(req, res)?.accessToken;
 
   if (accessToken) {
-    cid = getMembershipFromAccessToken(accessToken);
+    cid = getDetailsFromAccessToken(accessToken);
   }
 
   // this handles debugging of CID and allows us to set it by the URL to save it as a cookie
@@ -92,7 +91,7 @@ export async function getSessionCid(
     }
   }
 
-  // if we have a membership #, we convert to CID
+  // if we have a record #, we convert to CID
   if (cid && cid.length === 16) {
     cid = cid.slice(8, -1).replace(/^0+/, '');
   }

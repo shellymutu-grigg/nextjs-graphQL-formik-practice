@@ -22,8 +22,9 @@ export const useResendEmailStyles = makeStyles((theme) => ({
     fontSize: '1.25rem',
     fontWeight: 'bold',
     lineHeight: '1.75rem',
+    paddingTop: '2rem',
   },
-  marginBottomX1point5: {
+  bottomMargin1point5: {
     marginBottom: theme.spacing(1.5),
   },
   padding: {

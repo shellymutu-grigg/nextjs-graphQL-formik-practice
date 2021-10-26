@@ -29,8 +29,7 @@ export const defaults = {
  * Defaults
  */
 export const errors = {
-  NO_MATCHING_DETAILS:
-    "Sorry, we couldn't match those details to a Membership.",
+  NO_MATCHING_DETAILS: "Sorry, we couldn't match those details to a record.",
   CORRECTLY_ENTER_DETAILS: 'Please check your details are entered correctly.',
   CONTINUED_ERROR_PART_1:
     'If you continue to get this error, please give us a call on',
@@ -41,13 +40,14 @@ export const errors = {
  * @type {Object.<string, string>}
  */
 export const messages = {
-  CHECK_EMAIL_PART_ONE: "Check the email we've sent to ",
-  CHECK_EMAIL_PART_TWO: ' and click the link to verify your email',
+  CHECK_EMAIL_PART_ONE:
+    'If you would like us to resend verification to your email ',
+  CHECK_EMAIL_PART_TWO: ' please click the button below',
   DATE_OF_BIRTH: 'Date of birth',
   EMAIL: 'test@email.com',
   EMAIL_SENT_CTA: 'Email Sent',
   ENTER_DETAILS_PART_ONE: "Populate the following fields and click '",
-  ENTER_DETAILS_PART_TWO: "' to identify your membership record.",
+  ENTER_DETAILS_PART_TWO: "' to identify your record.",
   FIRST_NAME: 'First name',
   HELP_TEXT_PART_ONE: 'If you need help, ',
   LAST_NAME: 'Last name',
@@ -57,7 +57,7 @@ export const messages = {
   NEXT_CTA_TEXT: 'Next',
   PHONE_NUMBER: 'Phone number',
   PHONE_NUMBER_HELP: '0800 GET HELP',
-  PHONE_NUMBER_TEL_LINK: '0800022022',
+  PHONE_NUMBER_TEL_LINK: '0800000000',
   RESEND_CTA: 'Resend email',
   RESEND_EMAIL_ERROR:
     'We seem to be having issues right now. Please try again later.',
@@ -100,11 +100,6 @@ export const validationMessages = {
     MORE_THAN_TWO_SPACES: 'Must not contain more than two space characters',
     NO_LEADING_SPACE: 'Must not start with a space character',
     MAX_LENGTH: 'Must be less than 30 characters',
-  },
-  MEMBERSHIP_NUMBER: {
-    REQUIRED: 'Membership number is required',
-    DEFAULT_START_VALUE: 'Must start with 3083 26',
-    MIN_MAX_LENGTH: 'Must be 16 digits long',
   },
   PHONE_NUMBER: {
     REQUIRED: 'Phone number is required',

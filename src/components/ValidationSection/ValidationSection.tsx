@@ -89,7 +89,7 @@ export const ValidationSection: React.FC = () => {
         <br />
         {errors.CONTINUED_ERROR_PART_1}{' '}
         <Link href={`tel:${messages.PHONE_NUMBER_TEL_LINK}`}>
-          {messages.PHONE_NUMBER}
+          {messages.PHONE_NUMBER_HELP}
         </Link>{' '}
         {messages.MESSAGE_TEXT_THREE}
       </Modal>
