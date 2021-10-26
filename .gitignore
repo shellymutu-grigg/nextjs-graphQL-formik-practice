@@ -45,4 +45,4 @@ public/workbox-*
 
 # test reports
 test-reports/*
-coverage/*
+coverage/
