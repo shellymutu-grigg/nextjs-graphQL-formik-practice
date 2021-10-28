@@ -7,10 +7,10 @@ import { Link } from '@components/Link/Link';
 import { useResendEmailStyles } from './ResendEmailSection.styles';
 
 interface CardProps {
-  user: any;
-  handleClick: () => void;
-  isDisabled: boolean;
-  apiError: boolean;
+  user?: any;
+  handleClick?: () => void;
+  isDisabled?: boolean;
+  apiError?: boolean;
 }
 export const ResendEmailSection: FC<CardProps> = ({
   user,
