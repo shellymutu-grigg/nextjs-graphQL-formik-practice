@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Resend Email Section: should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-root MuiGrid-container MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
+  >
+    <div
+      class="MuiGrid-root main-content MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-center MuiGrid-grid-sm-10 MuiGrid-grid-lg-8 MuiGrid-grid-xl-6"
+    >
+      <div
+        class="MuiGrid-root makeStyles-bottomMargin1point5-4 MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-flex-start MuiGrid-justify-content-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-md-10 MuiGrid-grid-xl-8"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <div
+            class="MuiBox-root MuiBox-root-6"
+          >
+            <h4
+              class="MuiTypography-root makeStyles-boldHeader-3 MuiTypography-h4 MuiTypography-gutterBottom MuiTypography-alignLeft"
+            >
+              Verification
+            </h4>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-paragraph MuiTypography-alignLeft"
+          >
+            If you would like us to resend verification to your email 
+            
+             please click the button below
+          </p>
+        </div>
+        <div
+          class="MuiGrid-root MuiBox-root MuiBox-root-7"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-shadowButton-8 MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation"
+            tabindex="0"
+            type="submit"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span
+                class="MuiBox-root MuiBox-root-11"
+              >
+                Resend email
+              </span>
+            </span>
+          </button>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-paragraph MuiTypography-alignLeft"
+          >
+            If you need help, 
+            please email us at 
+            <a
+              class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="mailto:test@email.com"
+            >
+              test@email.com
+            </a>
+             or give us a call on 
+            <a
+              class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="tel:0800000000"
+            >
+              0800 GET HELP
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
