@@ -6,6 +6,7 @@ import AppContextProvider from '@utils/app-context';
 import theme from '@theme/theme';
 import { ReactQueryClientProvider } from '@components/ReactQueryClientProvider/ReactQueryClientProvider';
 import '../styles/globals.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App(props: AppProps): JSX.Element {
   const { Component, pageProps } = props;

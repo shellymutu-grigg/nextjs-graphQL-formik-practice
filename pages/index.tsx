@@ -41,9 +41,9 @@ export default withPageAuthRequired(function Home() {
           />
 
           <Card
-            title="Jest"
-            content="Demo of Jest in action"
-            href="#"
+            title="New React Component"
+            content="Demo of React Components in action"
+            href="/update-address"
             auth={!!user}
           />
 
