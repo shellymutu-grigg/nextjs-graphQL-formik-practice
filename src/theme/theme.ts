@@ -54,9 +54,9 @@ export const darkenColor = (color: string): string => darken(0.04, color);
 
 const palette = {
   primary: {
-    main: '#ffd400',
-    light: 'rgba(255,255,255,0.5)',
-    dark: darkenColor('#ffd400'),
+    main: '#5df5f2',
+    light: '#edfafa',
+    dark: darkenColor('#5df5f2'),
   },
 
   secondary: {

@@ -15,6 +15,7 @@ export const useValidationSectionStyles = makeStyles((theme) => ({
       height: '100%',
       padding: 0,
     },
+    width: '80%',
   },
   validationModal: {
     maxWidth: '37.5rem',
